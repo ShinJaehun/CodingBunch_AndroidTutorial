@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAE9D7"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Answer &amp; Question"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|normal"
+        android:textColor="#182881"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_solution"
+        android:textAlignment="textStart"
+        android:textSize="13sp"
+        android:textStyle="bold|normal"
+        android:textColor="#656364"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="10dp"/>
+
+    <View
+        android:background="#535151"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="9dp" />
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUsers"
+            tools:listitem="@layout/item_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    
+</LinearLayout>
