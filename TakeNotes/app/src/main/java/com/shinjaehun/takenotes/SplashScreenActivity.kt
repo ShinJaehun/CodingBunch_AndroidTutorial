@@ -6,6 +6,8 @@ import android.os.*
 import androidx.appcompat.app.AppCompatActivity
 import android.view.animation.AlphaAnimation
 import androidx.annotation.RequiresApi
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.shinjaehun.takenotes.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -43,8 +45,19 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun check() {
-        val intent = Intent(this@SplashScreenActivity, MainActivity::class.java)
-        startActivity(intent)
+//        val intent = Intent(this@SplashScreenActivity, SignUpActivity::class.java)
+//        startActivity(intent)
 
+        val account: GoogleSignInAccount? = GoogleSignIn.getLastSignedInAccount(applicationContext)
+        if (account != null) {
+            val intent: Intent = Intent(this@SplashScreenActivity, MainPageActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        } else {
+            // newbie
+            val intent: Intent = Intent(this@SplashScreenActivity, MainPageActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        }
     }
 }
