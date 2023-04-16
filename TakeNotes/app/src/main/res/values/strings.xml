@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TakeNotes</string>
+    <string name="instructions">From now Onwards you can export your entire TakeNotes Folder into a single PDF file\nthat folder contains only those images which you need in the PDF while using this functionality\n\nHappy Notes</string>
+    <string name="take_notes_image_to_be_displayed">https://the-rebooted-coder.github.io/Take-Notes/ample_time.png</string>
+    <string name="print">https://the-rebooted-coder.github.io/Take-Notes/loader.png</string>
+    <string name="no_img">There were no images under the TakeNotes Folder\n\nSave the Image and Try Again!</string>
+    <string name="not_yet_in">You are not yet signed in</string>
+    <string name="success_toast">Note Saved in Documents</string>
+    <string name="error_downloading">Error in Downloading</string>
+    <string name="failed_to_load_fnt">Failed to Upload Font</string>
+    <string name="advice">The Take Notes folder should contain only images, check once!\n\nDelete or Move Unsupported Files\n\nPDF cannot be saved\n\nIn order to ensure privacy you need to sign in again</string>
 </resources>
